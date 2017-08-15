@@ -14,7 +14,7 @@ RUN apt-get update -qy \
     && apt-get upgrade -qy --force-yes \
     && apt-get dist-upgrade -qy --force-yes \
     && apt-get install -qy curl wget zip unzip git software-properties-common build-essential perl cpanminus \
-    && cpanm Term::ReadLine DateTime Net::LDAP Test::Class Test::Base Test::More Test::Net::LDAP::Mock \
+    && cpanm Term::ReadLine DateTime Time::Local Net::LDAP Net::LDAP::Util Test::Class Test::Base Test::More Test::Net::LDAP::Mock \
     && apt-get remove -qy --purge software-properties-common \
     && apt-get autoclean -qy \
     && apt-get autoremove -qy --purge \
